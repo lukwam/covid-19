@@ -3,7 +3,7 @@
 export PATH=/opt/google-cloud-sdk/bin:$PATH
 
 PROJECT='broad-covid-19'
-IMAGE="gcr.io/${PROJECT}/github_to_bucket:latest"
+IMAGE="gcr.io/${PROJECT}/bucket_to_bigquery:latest"
 
 # pull the newest image
 docker pull ${IMAGE}

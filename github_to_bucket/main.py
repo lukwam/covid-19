@@ -1,8 +1,8 @@
+# -*- coding: utf-8 -*-
 """Cloud Function to move GitHub to Bucket."""
 
 import base64
 import google.auth
-import json
 
 from github import Github
 from google.cloud import storage
