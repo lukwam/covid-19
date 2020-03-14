@@ -18,7 +18,7 @@ steps:
     ]
 
 substitutions:
-  _FUNCTION: bucket_to_github
+  _FUNCTION: bucket_to_bigquery
   _MEMORY: 256MB
   _REGION: us-central1
   _REPO: lukwam_covid-19
