@@ -1,0 +1,25 @@
+---
+steps:
+  - name: gcr.io/cloud-builders/gcloud
+    dir: ${_FUNCTION}
+    args: [
+      'alpha',
+      'functions',
+      'deploy',
+      '${_FUNCTION}',
+      '--entry-point=${_FUNCTION}',
+      '--memory=${_MEMORY}',
+      '--project=${PROJECT_ID}',
+      '--region=${_REGION}',
+      '--runtime=python37',
+      '--timeout=${_TIMEOUT}',
+      '--trigger-http',
+      '--update-labels=repo=${_REPO}'
+    ]
+
+substitutions:
+  _FUNCTION: github_to_bucket
+  _MEMORY: 256MB
+  _REGION: us-central1
+  _REPO: lukwam/covid-19
+  _TIMEOUT: '60'
